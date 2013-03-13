@@ -8,23 +8,23 @@
   <meta name="viewport" content="width=device-width" />
   <title>ZURB 15th Birthday Party - <%= @title || 'RSVP' %></title>
 
-  <link rel="stylesheet" href="stylesheets/normalize.css" />
-  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="<%= settings.sub_uri %>stylesheets/normalize.css" />
+  <link rel="stylesheet" href="<%= settings.sub_uri %>stylesheets/app.css" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
-
+  
   <%= yield %>
 
-  <script src="javascripts/vendor/jquery.js"></script>
-  <script src="javascripts/foundation/foundation.js"></script>
-  <script src="javascripts/vendor/validate.js"></script>
-  <script src="javascripts/foundation/foundation.reveal.js"></script>
-  <script src="javascripts/foundation/foundation.forms.js"></script>
-  <script src="javascripts/app.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/vendor/jquery.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/foundation/foundation.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/vendor/validate.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/foundation/foundation.reveal.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/foundation/foundation.forms.js"></script>
+  <script src="<%= settings.sub_uri %>javascripts/app.js"></script>
   
 </body>
 </html>

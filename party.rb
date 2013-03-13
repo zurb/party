@@ -20,6 +20,14 @@ end
 DataMapper.finalize.auto_upgrade!
 
 class Public < Sinatra::Base
+  configure :development do
+    set :sub_uri, "/"
+  end
+
+  configure :production do
+    set :sub_uri, "/15/"
+  end
+
   get '/' do
     erb :index
   end
@@ -39,12 +47,20 @@ class Public < Sinatra::Base
 end
 
 class Admin < Sinatra::Base
+  configure :development do
+    set :sub_uri, "/"
+  end
+
+  configure :production do
+    set :sub_uri, "/15/"
+  end
+
   use Rack::Auth::Basic, "Admin Area" do |username, password|
     username == 'zurb' && password == 'party'
   end
 
   get '/' do 
-    redirect '/15/admin/guests'
+    redirect "#{settings.sub_uri}admin/guests"
   end
 
   get '/guests' do
