@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="large-9 columns panel">
+    <br>
+    <h4>Guest List</h4>
+    <table id="guests">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Guests</th>
+          <th>Attending?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rsvps.each do |rsvp| %>
+        <tr>
+          <td><%= rsvp.name %></td>
+          <td><%= rsvp.email %></td>
+          <td><%= rsvp.guests %></td>
+          <td class="<%= rsvp.attending? ? 'attending' : 'not-attending' %>"><%= rsvp.attending? ? 'Yes' : 'No' %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+  </div>
+</div>
