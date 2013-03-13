@@ -20,7 +20,6 @@ class Public < Sinatra::Base
   end
 
   post '/' do
-    puts params.inspect
     content_type :json
     @rsvp = Rsvp.first_or_create({ :email => params[:email] }, {
       :attending => params[:attending],
