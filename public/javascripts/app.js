@@ -73,7 +73,7 @@ $(function ($) {
 
     $.ajax({
       type: "POST",
-      url: '/15',
+      url: '/',
       data: $("form").serialize(), // serializes the form's elements.
       success: function(data) {
         var rsvp = data;
