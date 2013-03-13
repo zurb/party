@@ -5,6 +5,7 @@
     <table id="guests">
       <thead>
         <tr>
+          <th>#</th>
           <th>Name</th>
           <th>Email</th>
           <th>Guests</th>
@@ -12,8 +13,9 @@
         </tr>
       </thead>
       <tbody>
-        <% @rsvps.each do |rsvp| %>
+        <% @rsvps.each_with_index do |rsvp, i| %>
         <tr>
+          <td><%= i + 1 %></td>
           <td><%= rsvp.name %></td>
           <td><%= rsvp.email %></td>
           <td><%= rsvp.guests %></td>
