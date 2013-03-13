@@ -57,14 +57,14 @@ $(function ($) {
     }
 	}).trigger('scroll');
 
-  $('form')
+  $('#reserve')
     .h5Validate()
-    .on('instance', function () {
-      alert('created')
-    })
     .on('keyup', function () {
-      alert('valid!')
-      $("#submit").removeClass('disabled');
+      if ($('input.ui-state-error').length < 1) {
+        $("#submit").removeClass('disabled');
+      } else {
+        $("#submit").addClass('disabled');
+      }
     });
 
   $("#submit").click(function(e) {
