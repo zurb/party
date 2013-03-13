@@ -1,4 +1,4 @@
-tmp/
+tmp/*
 .sass-cache/
 .DS_Store
 party.db
