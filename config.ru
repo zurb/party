@@ -6,6 +6,6 @@ require './party'
 set :raise_errors, true
 
 run Rack::URLMap.new({
-  "/" => Public,
-  "/admin" => Admin
+  "/15" => Public,
+  "/15/admin" => Admin
 })

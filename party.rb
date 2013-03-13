@@ -44,7 +44,7 @@ class Admin < Sinatra::Base
   end
 
   get '/' do 
-    redirect '/admin/guests'
+    redirect '/15/admin/guests'
   end
 
   get '/guests' do
