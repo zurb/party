@@ -25,12 +25,11 @@ class Public < Sinatra::Base
   end
 
   post '/' do
-    puts params.inspect
     content_type :json
     @rsvp = Rsvp.first_or_create({ :email => params[:email] }, {
       :attending => params[:attending],
       :name      => params[:name],
-      :email     => params[:email].empty? ? 'not provided' : params[:email],
+      :email     => params[:email],
       :guests    => params[:guests].empty? ? 0 : params[:guests],
       :created_at => Time.now,
       :updated_at => Time.now 
