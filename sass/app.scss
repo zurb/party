@@ -102,6 +102,7 @@ a.map { color: #5c5c5c; }
 	h2 { margin: 0 auto; width: 65% !important; }
 	p { font-size: 16px; margin-bottom: 25px; margin-top: 14px; }
 	img { margin: 0 auto; position: relative; top: 1px; }
+	a { cursor: pointer; }
 }
 .fixed { background: rgba(255,255,255,0.9); @include box-shadow(0 0px 6px rgba(0, 0, 0, 0.1)); top: -175px; transition: top 500ms; -webkit-transition: top 500ms; -moz-transition: top 500ms; -o-transition: top 500ms; -ms-transition: top 500ms; z-index: 41; 
 	&.push-down { top: 0; }
@@ -174,7 +175,7 @@ img.world { width: 194px !important; height: 160px; margin-right: -15px; }
 	}
 	.fixed { display: none; }
 	.hero { height: auto; 
-		h2 { width: 100%; margin-bottom: 20px; }
+		h2 { width: 80% !important; margin-bottom: 20px !important; }
 		img { top: 0px; }
 		.button { margin-top: 12px; margin-bottom: 6px; }
 		p.show-for-small { margin-bottom: 0px; }
@@ -183,23 +184,38 @@ img.world { width: 194px !important; height: 160px; margin-right: -15px; }
 			h6 { font-family: "ProximaCondensed", Helvetica, Arial, sans-serif;  text-transform: uppercase; color: #c0c0c0; font-size: 11px; margin-bottom: 0; text-align: right; margin-top: 0;  }
 			p { font-size: 11px; color: #5c5c5c; font-weight: bold; line-height: 1; text-align: left; margin-bottom: 1.2em; }
 		}
+		p { margin-top: 0px; }
 	}	
-	
+	.reveal-modal.small { 
+		form .row .columns {padding-left: 0.5em !important; padding-right: 0.5em !important;}
+		.yes { left: 0;  }
+		.no { right: 0; }
+	}
 }
 
+@media only screen and (min-device-width: 768px){ 
+	.reveal-modal.small { width: 60%; margin-left: -30%;}
+}
 
 
 @media only screen and (min-width:321px) and (max-width:768px) {
 	p { font-size: 0.8em; }
-	.hero {
+	.hero { height: auto !important;
+		.columns { padding: 0 20px !important;  }
 		h2 { width: 100% !important; }
 		img { display: block; top:1px; }
+		p { margin-top: 0px !important; }
 	}
 	.timeline { 
 		.row .row { opacity: 1; filter:alpha(opacity=100); }
 	}
 	.row.last {
 		h2 { width: 80% !important; }
+	}
+	.reveal-modal.small {
+		form .row .columns {padding-left: .5em !important; padding-right: .5em !important;}
+		.yes { left: 0;  }
+		.no { right: 0; }
 	}
 }
 
