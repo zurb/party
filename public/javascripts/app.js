@@ -57,16 +57,26 @@ $(function ($) {
     }
 	}).trigger('scroll');
 
+  $('form')
+    .h5Validate()
+    .on('instance', function () {
+      alert('created')
+    })
+    .on('keyup', function () {
+      alert('valid!')
+      $("#submit").removeClass('disabled');
+    });
+
   $("#submit").click(function(e) {
     e.preventDefault();
+    if ($(this).hasClass('disabled')) return false;
 
     $.ajax({
       type: "POST",
       url: '/',
-      data: $("#RSVP form").serialize(), // serializes the form's elements.
+      data: $("form").serialize(), // serializes the form's elements.
       success: function(data) {
-        var rsvp = JSON.parse(data);
-        window.rsvp = rsvp;
+        var rsvp = data;
         if (rsvp.attending) {
           $('#thanks p').text('See you at the party, ' + rsvp.name.split(' ')[0] + '!');
           $('#thanks').foundation('reveal', 'open');

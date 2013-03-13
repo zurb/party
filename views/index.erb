@@ -219,6 +219,8 @@
 
 <div id="RSVP" class="small reveal-modal">
   <h2>Please RSVP by April 13</h2>
+  <div id="invalid-name" class="ui-state-error alert-box alert message" style="display: none">Please provide your name.</div>
+  <div id="invalid-email" class="ui-state-error alert-box alert message" style="display: none">Please provide your email.</div>
   <form class="custom" action="/" method="post">
     <div class="row">
       <div class="small-6 columns yes">
@@ -231,13 +233,13 @@
     
     <div class="row">
       <div class="small-12 columns">
-        <input type="text" name="name" id="name" placeholder="Your Name">
+        <input type="text" name="name" id="name" placeholder="Your Name" data-h5-errorid="invalid-name" required />
       </div>
     </div>
     
     <div class="row">
       <div class="small-12 columns">
-        <input type="text" name="email" id="name" placeholder="Your Email">
+        <input type="text" name="email" id="name" class="h5-email" placeholder="Your Email" data-h5-errorid="invalid-email" required />
       </div>
     </div>
     
@@ -247,7 +249,7 @@
       </div>
     </div>
     
-    <a class="button" id="submit" data-reveal-id="thanks-yes">SUBMIT</a>
+    <a class="button disabled" id="submit" data-reveal-id="thanks-yes">SUBMIT</a>
   </form>
   <a class="close-reveal-modal">&#215;</a>
 </div>
