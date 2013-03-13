@@ -1,4 +1,4 @@
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/party.db")
+DataMapper::setup(:default, "sqlite3://#{File.expand_path("..",Dir.pwd)}/shared/party.db")
 
 class Rsvp
   include DataMapper::Resource
