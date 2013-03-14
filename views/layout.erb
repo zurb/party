@@ -15,7 +15,7 @@
   <script src="<%= settings.sub_uri %>javascripts/vendor/custom.modernizr.js"></script>
 
 </head>
-<body>
+<body data-sub-uri="<%= settings.sub_uri %>">
   
   <%= yield %>
 
@@ -25,6 +25,5 @@
   <script src="<%= settings.sub_uri %>javascripts/foundation/foundation.reveal.js"></script>
   <script src="<%= settings.sub_uri %>javascripts/foundation/foundation.forms.js"></script>
   <script src="<%= settings.sub_uri %>javascripts/app.js"></script>
-  
 </body>
 </html>
