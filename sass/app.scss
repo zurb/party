@@ -196,12 +196,11 @@ $default-origin-z: 50%;
   80%  { opacity: .88; @include rotate(2deg); @include transform-origin; }
   85%  { opacity: 1; @include rotate(0deg); @include transform-origin; }
   100% { opacity: .92; @include rotate(-1deg); @include transform-origin; }
-}95%  { opacity: .85; @include rotate(1deg); @include transform-origin; }
-
-
-.animation-container {
-  position: relative !important;
 }
+
+
+.container.hero { background: url('../images/15.jpg') bottom center no-repeat #fff !important; }
+
 .flame-left {
   position: absolute !important;
   bottom: 214px;
@@ -274,6 +273,7 @@ $default-origin-z: 50%;
 	h1.logo { margin: 26px auto 16px; }
 	.fade-in { display: block; }
 	h2 { font-size: 1.1em; margin-bottom: 20px; }
+  .hero { height: 600px; }
 	.timeline {
 		.row .row { margin-bottom: 0px; opacity: 1; filter:alpha(opacity=100); }
 		h2 { margin: 44px 0 34px; }
@@ -291,8 +291,8 @@ $default-origin-z: 50%;
 		.row.last h2 { width: 80%; }
 	}
 	.fixed { display: none; }
-	.hero { height: auto;
-		h2 { width: 80% !important; margin-bottom: 20px !important; }
+	  .hero {
+		h2 { width: 95% !important; margin-bottom: 20px !important; font-size: 16px; }
 		// img { top: 0px; }
 		.button { margin-top: 12px; margin-bottom: 6px; }
 		p.show-for-small { margin-bottom: 0px; }
@@ -305,20 +305,20 @@ $default-origin-z: 50%;
 	}
 	.reveal-modal.small {
 		form .row .columns {padding-left: 0.5em !important; padding-right: 0.5em !important;}
-		.yes { left: 0;  }
+		.yes { left: 0; }
 		.no { right: 0; }
 	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-width:1168px) {
-	.reveal-modal.small { width: 80%; margin-left: -40%;}
-	.hero { height: auto !important; }
+	.reveal-modal.small { width: 80%; margin-left: -40%; }
+	// .hero { height: auto !important; }
 }
 
 
 @media only screen and (min-width:321px) and (max-width:768px) {
 	p { font-size: 0.8em; }
-	.hero { height: auto !important;
+	.hero {
 		.columns { padding: 0 20px !important;  }
 		h2 { width: 100% !important; }
 		// img { display: block; top:1px; }
@@ -337,10 +337,10 @@ $default-origin-z: 50%;
 	}
 }
 
-@media only screen and (max-width: 415px) {
-  .flame-left { bottom: 205px; }
-  .flame-right { bottom: 205px; }
-}
+// @media only screen and (max-width: 415px) {
+//   .flame-left { bottom: 205px; }
+//   .flame-right { bottom: 205px; }
+// }
 
 //
 // IE
