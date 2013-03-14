@@ -1,7 +1,7 @@
 require 'json'
 require 'fileutils'
 
-SHARED_PATH = File.expand_path("../shared", __FILE__)
+SHARED_PATH = File.expand_path("../../shared", __FILE__)
 FileUtils.mkdir_p(SHARED_PATH) unless File.directory?(SHARED_PATH)
 DataMapper::setup(:default, "sqlite3://#{SHARED_PATH}/party.db")
 
