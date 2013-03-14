@@ -1,0 +1,7 @@
+development:
+  sub_uri: /
+  database: ./party.db
+
+production:
+  sub_uri: /15/
+  database: /var/www/party/shared/party.db
