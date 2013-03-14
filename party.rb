@@ -1,9 +1,12 @@
 require 'json'
 require 'fileutils'
+require 'yaml'
 
-SHARED_PATH = File.expand_path("../../shared", __FILE__)
-FileUtils.mkdir_p(SHARED_PATH) unless File.directory?(SHARED_PATH)
-DataMapper::setup(:default, "sqlite3://#{SHARED_PATH}/party.db")
+env = ENV["RACK_ENV"] || "development"
+ZURB_CODE = YAML::load_file(File.expand_path("../config/zurb_code.yml",__FILE__))[env]
+db_path = File.expand_path(ZURB_CODE["database"])
+FileUtils.mkdir_p(File.expand_path("..",db_path)) unless File.directory?(File.expand_path("..",db_path))
+DataMapper::setup(:default, "sqlite3://#{db_path}")
 
 class Rsvp
   include DataMapper::Resource
@@ -20,12 +23,8 @@ end
 DataMapper.finalize.auto_upgrade!
 
 class Public < Sinatra::Base
-  configure :development do
-    set :sub_uri, "/"
-  end
-
-  configure :production do
-    set :sub_uri, "/15/"
+  configure do
+    set :sub_uri, ZURB_CODE["sub_uri"]
   end
 
   get '/' do
@@ -47,12 +46,8 @@ class Public < Sinatra::Base
 end
 
 class Admin < Sinatra::Base
-  configure :development do
-    set :sub_uri, "/"
-  end
-
-  configure :production do
-    set :sub_uri, "/15/"
+  configure do
+    set :sub_uri, ZURB_CODE["sub_uri"]
   end
 
   use Rack::Auth::Basic, "Admin Area" do |username, password|
