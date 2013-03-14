@@ -273,7 +273,7 @@ $default-origin-z: 50%;
 	h1.logo { margin: 26px auto 16px; }
 	.fade-in { display: block; }
 	h2 { font-size: 1.1em; margin-bottom: 20px; }
-  .hero { height: 600px; }
+  .hero { height: 590px; }
 	.timeline {
 		.row .row { margin-bottom: 0px; opacity: 1; filter:alpha(opacity=100); }
 		h2 { margin: 44px 0 34px; }
@@ -292,7 +292,7 @@ $default-origin-z: 50%;
 	}
 	.fixed { display: none; }
 	  .hero {
-		h2 { width: 95% !important; margin-bottom: 20px !important; font-size: 16px; }
+		h2 { width: 95% !important; margin-bottom: 20px !important; font-size: 18px; }
 		// img { top: 0px; }
 		.button { margin-top: 12px; margin-bottom: 6px; }
 		p.show-for-small { margin-bottom: 0px; }
@@ -308,6 +308,44 @@ $default-origin-z: 50%;
 		.yes { left: 0; }
 		.no { right: 0; }
 	}
+  .touch .container.hero {
+    background-size: 95%;
+    height: 570px;
+  }
+  .touch .flame-right,
+  .touch .flame-left {
+
+    &.wish-made { opacity: 1 !important; }
+  }
+  .touch .flame-left {
+     &.wish-made {
+      -webkit-animation: flame-on-left 3s infinite;
+         -moz-animation: flame-on-left 3s infinite;
+           -o-animation: flame-on-left 3s infinite;
+              animation: flame-on-left 3s infinite;
+    }
+  }
+  .touch .flame-right {
+    &.wish-made {
+      -webkit-animation: flame-on-right 3s infinite;
+         -moz-animation: flame-on-right 3s infinite;
+           -o-animation: flame-on-right 3s infinite;
+              animation: flame-on-right 3s infinite;
+    }
+  }
+  .touch .fixed .hero h2 { font-size: 14px !important; }
+  .touch .flame-left {
+    bottom: 185px;
+    margin-left: -82px;
+  }
+  .touch .flame-right {
+    bottom: 185px;
+    margin-right: -82px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .container.hero h2 { width: 85% !important; }
 }
 
 @media only screen and (min-device-width: 768px) and (max-width:1168px) {
@@ -337,10 +375,6 @@ $default-origin-z: 50%;
 	}
 }
 
-// @media only screen and (max-width: 415px) {
-//   .flame-left { bottom: 205px; }
-//   .flame-right { bottom: 205px; }
-// }
 
 //
 // IE
