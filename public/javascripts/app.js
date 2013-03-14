@@ -70,10 +70,13 @@ $(function ($) {
   $("#submit").click(function(e) {
     e.preventDefault();
     if ($(this).hasClass('disabled')) return false;
-
+    var sub_uri = $('body').attr('data-sub-uri');
+    if (typeof sub_uri === 'undefined') {
+      sub_uri = '/';
+    }
     $.ajax({
       type: "POST",
-      url: '/',
+      url: sub_uri,
       data: $("form").serialize(), // serializes the form's elements.
       success: function(data) {
         var rsvp = data;
