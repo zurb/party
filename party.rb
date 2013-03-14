@@ -40,7 +40,7 @@ class Public < Sinatra::Base
       :email     => params[:email],
       :guests    => params[:guests].empty? ? 0 : params[:guests],
       :created_at => Time.now,
-      :updated_at => Time.now 
+      :updated_at => Time.now
     })
     @rsvp.to_json
   end
@@ -59,7 +59,7 @@ class Admin < Sinatra::Base
     username == 'zurb' && password == 'party'
   end
 
-  get '/' do 
+  get '/' do
     redirect "#{settings.sub_uri}admin/guests"
   end
 

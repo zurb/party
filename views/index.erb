@@ -24,7 +24,7 @@
 
 <div class="container hero">
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-12 columns animation-container">
       <h1 class="logo">ZURB</h1>
       <h2>We&rsquo;re celebrating our brand new office building and 15 years of helping people design for people</h2>
       <p class="hide-for-small">You're invited! <a data-reveal-id="RSVP">RSVP by April 13 &rarr;</a></p>
@@ -61,8 +61,10 @@
         </div>
       </div>
       <p class="show-for-small"> <a href="#" data-reveal-id="RSVP" class="button">RSVP BY APRIL 13</a></p>
-      <img src="<%= settings.sub_uri %>images/15.jpg">
-    </div>  
+      <img class="flame-left" src="<%= settings.sub_uri %>images/flame.jpg">
+      <img class="flame-right" src="<%= settings.sub_uri %>images/flame.jpg">
+      <img class="num-fifteen" src="<%= settings.sub_uri %>images/15.jpg">
+    </div>
   </div>
 </div>
 
@@ -70,7 +72,7 @@
   <div class="row">
     <div class="small-12 columns">
       <h2>A walk down memory lane</h2>
-      
+
       <div class="row" id="1998">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/z.png">
@@ -79,7 +81,7 @@
           <span>1998</span> <p>Bryan started ZB design to help people figure out their design problems. His first project didn't go so well. He rallied to overcome that first disappointment to crush his next project.</p>
         </div>
       </div>
-      
+
       <div class="row" id="1999">
         <div class="large-6 small-12 columns image right">
           <img src="<%= settings.sub_uri %>images/zurb.png">
@@ -88,7 +90,7 @@
           <span>1999</span> <p>After going through 50 four-letter domains, ZURB was chosen for its energy and also because it appropriately described Bryan's hair.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2000">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/cupnoodles.png">
@@ -97,7 +99,7 @@
           <span>2000</span> <p>Bryan decided to devote himself full-time to the business and hunkered down in his apartment with a cupboard full of Cup Noodles. Our first startup client, Rentpayment.com, still exists today.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2001">
         <div class="large-6 small-12  columns image right">
           <img src="<%= settings.sub_uri %>images/zurb-photos.png">
@@ -106,7 +108,7 @@
           <span>2001</span> <p>Bryan set up a photography site, ZURBphotos. Tons of people started asking to use his photos. This influenced the creation of another business at ZURB and cemented our commitment to taking risks through experimentation.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2003">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/intern.png">
@@ -115,7 +117,7 @@
           <span>2003</span> <p>ZURB hired its first intern. Work continued to help all different types of startups with interface design.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2004">
         <div class="large-6 small-12  columns image right">
           <img src="<%= settings.sub_uri %>images/lg.png">
@@ -124,7 +126,7 @@
           <span>2004</span> <p>Our first 600 square foot office was set-up in Los Gatos. Our first network included a shared account to Earthlink and a floppy disk.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2005">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/55n3rd.png">
@@ -133,7 +135,7 @@
           <span>2005</span> <p>We moved to a 1500 square foot office in Campbell. We later took over double the space in the same office building.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2006">
         <div class="large-6 small-12  columns image right">
           <img src="<%= settings.sub_uri %>images/zurbwired.png">
@@ -142,7 +144,7 @@
           <span>2006</span> <p>ZURB held its first 24-hour ZURBwired event, a marathon design event done for one lucky non-profit. This tradition continues annually.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2008">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/100.png">
@@ -151,7 +153,7 @@
           <span>2008</span> <p>At this point, ZURB had helped 100 startups. We believe Design with a capital "D" is causing a sea of change in the product design business. We're so excited by this and want to lead its adoption by more people.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2009">
         <div class="large-6 small-12  columns image right">
           <img src="<%= settings.sub_uri %>images/notable.png">
@@ -160,7 +162,7 @@
           <span>2009</span> <p>ZURB launched Notable, the first of our product design apps made to speed up feedback on website details, as a way to extend its service offering to help people design great products faster.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2010">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/verify.png">
@@ -169,7 +171,7 @@
           <span>2010</span> <p>ZURB launched its second platform app, Verify, the fastest way to collect and analyze user feedback.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2011">
         <div class="large-6 small-12  columns image right">
           <img src="<%= settings.sub_uri %>images/foundation.png">
@@ -178,7 +180,7 @@
           <span>2011</span> <p>The ZURB team grew to 14 people and expanded beyond consulting to pursue five revenue streams: consulting services, products, talent, events and publishing. We released our open-source front-end framework, Foundation.</p>
         </div>
       </div>
-      
+
       <div class="row" id="2012">
         <div class="large-6 small-12 columns image left">
           <img src="<%= settings.sub_uri %>images/world-domination.png" class="world">
@@ -187,7 +189,7 @@
           <span>2012</span> <p>At this point, ZURB has helped more than 200 startups. ZURBapps launched, which represents over 3 years of development that includes 11 apps. We're well on our quest for world domination.</p>
         </div>
       </div>
-      
+
       <div class="row last" id="2013">
         <div class="small-12">
           <img src="<%= settings.sub_uri %>images/building.png">
@@ -198,7 +200,7 @@
           <p class="small">Changing your response or need to get in touch? Email <a href="mailto:shawna@zurb.com">shawna@zurb.com</a></p>
         </div>
       </div>
-      
+
       <span class="dot" style="top: 171px;"></span>
       <span class="dot" style="top: 403px;"></span>
       <span class="dot" style="top: 633px;"></span>
@@ -224,31 +226,31 @@
   <form class="custom" id="reserve" action="/" method="post">
     <div class="row">
       <div class="small-6 columns yes">
-        <label for="yes"><input name="attending" type="radio" id="yes" style="display:none;" value="1" CHECKED><span class="custom radio checked"></span> Heck yeah!</label>     
+        <label for="yes"><input name="attending" type="radio" id="yes" style="display:none;" value="1" CHECKED><span class="custom radio checked"></span> Heck yeah!</label>
       </div>
       <div class="small-6 columns no">
         <label for="no"><input name="attending" type="radio" id="no" value="0" style="display:none;"><span class="custom radio"></span> No can do</label>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="small-12 columns">
         <input type="text" name="name" id="name" placeholder="Your Name (required)" data-h5-errorid="invalid-name" required />
       </div>
     </div>
-    
+
     <div class="row">
       <div class="small-12 columns">
         <input type="text" name="email" id="name" class="h5-email" placeholder="Your Email (required)" data-h5-errorid="invalid-email" required />
       </div>
     </div>
-    
+
     <div class="row">
       <div class="small-12 columns small-centered">
         <input type="text" name="guests" id="name" placeholder="# Guests">
       </div>
     </div>
-    
+
     <a class="button disabled" id="submit">SUBMIT</a>
   </form>
   <a class="close-reveal-modal">&#215;</a>
