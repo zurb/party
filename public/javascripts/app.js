@@ -3,6 +3,13 @@ $(function ($) {
 	/* Top Bar */
   $(window).scroll(function() {
     var scroll = Math.max($('body').scrollTop(), $('html,body').scrollTop());
+    if (scroll > 80) {
+      $(".flame-left").addClass("wish-made");
+      $(".flame-right").addClass("wish-made");
+    } else {
+      $(".flame-left").removeClass("wish-made");
+      $(".flame-right").removeClass("wish-made");
+    }
     if (scroll > 100 && scroll < 3100) {
       $(".fixed").addClass("push-down");
   	} else {
@@ -10,43 +17,43 @@ $(function ($) {
     }
     if (scroll > 155) {
       $("#1998").addClass("fade");
-    } 
+    }
     if (scroll > 420) {
       $("#1999").addClass("fade");
-    } 
+    }
     if (scroll > 650) {
       $("#2000").addClass("fade");
     }
     if (scroll > 860) {
       $("#2001").addClass("fade");
-    } 
+    }
     if (scroll > 1060) {
       $("#2003").addClass("fade");
-    } 
+    }
     if (scroll > 1320) {
       $("#2004").addClass("fade");
-    } 
+    }
     if (scroll > 1530) {
       $("#2005").addClass("fade");
-    } 
+    }
     if (scroll > 1780) {
       $("#2006").addClass("fade");
-    } 
+    }
     if (scroll > 2010) {
       $("#2008").addClass("fade");
-    } 
+    }
     if (scroll > 2300) {
       $("#2009").addClass("fade");
-    } 
+    }
     if (scroll > 2550) {
       $("#2010").addClass("fade");
-    } 
+    }
     if (scroll > 2750) {
       $("#2011").addClass("fade");
-    } 
+    }
     if (scroll > 3000) {
       $("#2012").addClass("fade");
-    } 
+    }
     if (scroll > 3050) {
       $("#2013").addClass("fade");
     }
@@ -91,5 +98,5 @@ $(function ($) {
      });
 
   });
-	
+
 }( Foundation.zj ));

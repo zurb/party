@@ -208,6 +208,7 @@ $default-origin-z: 50%;
   top: auto;
   left: 50%;
   margin-left: -96px;
+  @include single-transition(opacity,250ms);
 
   -webkit-animation: flame-on-left 3s infinite;
      -moz-animation: flame-on-left 3s infinite;
@@ -221,6 +222,14 @@ $default-origin-z: 50%;
      -moz-animation-timing-function: linear;
        -o-animation-timing-function: linear;
           animation-timing-function: linear;
+
+  &.wish-made {
+    opacity: 0;
+    -webkit-animation: none;
+       -moz-animation: none;
+         -o-animation: none;
+            animation: none;
+  }
 }
 .flame-right {
   position: absolute !important;
@@ -228,6 +237,7 @@ $default-origin-z: 50%;
   top: auto;
   right: 50%;
   margin-right: -96px;
+  @include single-transition(opacity,250ms);
 
   -webkit-animation: flame-on-right 3s infinite;
      -moz-animation: flame-on-right 3s infinite;
@@ -241,6 +251,14 @@ $default-origin-z: 50%;
      -moz-animation-timing-function: linear;
        -o-animation-timing-function: linear;
           animation-timing-function: linear;
+
+  &.wish-made {
+    opacity: 0;
+    -webkit-animation: none;
+       -moz-animation: none;
+         -o-animation: none;
+            animation: none;
+  }
 }
 .num-fifteen {
   position: relative;
